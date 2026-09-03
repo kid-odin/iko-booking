@@ -7,8 +7,8 @@
 <title>IKO 剧本空位</title>
 <style>
 :root{--bg:#f6f7f8;--card:#fff;--text:#20242a;--muted:#727985;--line:#e4e7eb;--dark:#22262d;--free:#e9f6ef;--freeText:#246044;--accent:#252930}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg)}button,input{font:inherit}button{cursor:pointer}.shell{position:relative;z-index:2;width:min(980px,calc(100% - 28px));margin:0 auto;padding:34px 0 70px}.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}.hero h1{font-size:34px;margin:0 0 7px;letter-spacing:-.5px}.hero p{margin:0;color:var(--muted);font-size:14px}.badge{font-size:12px;color:#476052;background:#edf5f0;border:1px solid #dcebe2;border-radius:999px;padding:7px 10px}.toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:20px 0 10px}.toolbar input{width:100%;min-width:0;border:1px solid var(--line);background:#fff;border-radius:11px;padding:12px 14px;font-size:16px;outline:none}.toolbar input:focus{border-color:#9aa0aa;box-shadow:0 0 0 3px rgba(60,65,75,.08)}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:10px;padding:10px 13px;font-weight:700}.btn:hover{background:#f3f4f5}.switch{display:flex;gap:6px;margin:10px 0 14px}.switch .btn{padding:8px 14px}.switch .btn.active{background:var(--dark);border-color:var(--dark);color:#fff}.status{font-size:12px;color:var(--muted);min-height:18px;margin-bottom:10px}.date-group{margin:18px 0}.date-head{display:flex;gap:10px;align-items:baseline;margin-bottom:8px}.date-head h2{font-size:19px;margin:0}.date-head span{font-size:12px;color:var(--muted)}.event{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 15px;margin:8px 0}.event-top{display:flex;align-items:center;gap:10px;justify-content:space-between}.event-title{font-weight:850;font-size:16px}.time{font-variant-numeric:tabular-nums;font-weight:800;white-space:nowrap}.free{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}.role{background:var(--free);color:var(--freeText);border-radius:999px;padding:5px 8px;font-size:12px;font-weight:700}.full{font-size:12px;color:#8a5b5b;background:#f8eded;border-radius:999px;padding:5px 8px}.empty{background:#fff;border:1px dashed #cfd3d9;border-radius:13px;padding:28px;text-align:center;color:var(--muted)}.cal-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:8px 0 10px}.cal-title{font-size:19px;font-weight:850}.cal-actions{display:flex;gap:6px}.calendar{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}.weekday{padding:8px 3px;text-align:center;background:#f7f8fa;border-bottom:1px solid var(--line);font-size:11px;font-weight:800;color:#69707b}.day{min-width:0;min-height:112px;padding:6px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;text-align:left;overflow:hidden}.day:nth-child(7n){border-right:0}.day.other{background:#fafbfc;color:#b5b9c0}.day.today{box-shadow:inset 0 0 0 2px #333}.date-num{font-size:11px;font-weight:850;margin-bottom:4px}.cal-event{display:block;width:100%;border:0;background:#edf6f1;color:#265b46;border-radius:6px;padding:4px 5px;margin:3px 0;font-size:10px;line-height:1.25;text-align:left;white-space:normal;overflow:hidden}.more{font-size:10px;color:var(--muted);padding:2px}.modal-backdrop{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.38);display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(560px,100%);max-height:80vh;overflow:auto;background:#fff;border-radius:16px;padding:18px}.modal h2{margin:0 0 12px;font-size:20px}.modal .event{background:#fafbfc}.modal-actions{display:flex;justify-content:flex-end;margin-top:14px}.bg-dms{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}.bg-dm{position:absolute;border-radius:20px;overflow:hidden;opacity:.16;filter:saturate(.94);animation:floaty var(--dm-speed,18s) ease-in-out infinite alternate;box-shadow:0 12px 35px rgba(0,0,0,.10);will-change:transform}.bg-dm img{width:100%;height:100%;object-fit:cover}.foot{margin-top:18px;font-size:11px;color:#8a9099;text-align:center}@keyframes floaty{0%{transform:translate3d(-10px,-18px,0) rotate(-4deg)}35%{transform:translate3d(26px,6px,0) rotate(2deg)}70%{transform:translate3d(-16px,34px,0) rotate(-1deg)}100%{transform:translate3d(34px,48px,0) rotate(5deg)}}
-@media(max-width:640px){.shell{width:min(100% - 20px,980px);padding-top:24px}.hero h1{font-size:28px}.toolbar{grid-template-columns:1fr auto}.event-top{align-items:flex-start}.day{min-height:84px;padding:4px}.weekday{font-size:10px;padding:6px 1px}.date-num{font-size:10px}.cal-event{font-size:9px;padding:3px 4px;margin:2px 0}.cal-title{font-size:16px}.badge{display:none}}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg)}button,input{font:inherit}button{cursor:pointer}.shell{position:relative;z-index:2;width:min(980px,calc(100% - 28px));margin:0 auto;padding:34px 0 70px}.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}.hero h1{font-size:34px;margin:0 0 7px;letter-spacing:-.5px}.hero p{margin:0;color:var(--muted);font-size:14px}.badge{font-size:12px;color:#476052;background:#edf5f0;border:1px solid #dcebe2;border-radius:999px;padding:7px 10px}.toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:20px 0 10px}.toolbar input{width:100%;min-width:0;border:1px solid var(--line);background:#fff;border-radius:11px;padding:12px 14px;font-size:16px;outline:none}.toolbar input:focus{border-color:#9aa0aa;box-shadow:0 0 0 3px rgba(60,65,75,.08)}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:10px;padding:10px 13px;font-weight:700}.btn:hover{background:#f3f4f5}.switch{display:flex;gap:6px;margin:10px 0 14px}.switch .btn{padding:8px 14px}.switch .btn.active{background:var(--dark);border-color:var(--dark);color:#fff}.status{font-size:12px;color:var(--muted);min-height:18px;margin-bottom:10px}.date-group{margin:18px 0}.date-head{display:flex;gap:10px;align-items:baseline;margin-bottom:8px}.date-head h2{font-size:19px;margin:0}.date-head span{font-size:12px;color:var(--muted)}.event{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 15px;margin:8px 0}.event-top{display:flex;align-items:center;gap:10px;justify-content:space-between}.event-title{font-weight:850;font-size:16px}.time{font-variant-numeric:tabular-nums;font-weight:800;white-space:nowrap}.free{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}.role{background:var(--free);color:var(--freeText);border-radius:999px;padding:5px 8px;font-size:12px;font-weight:700}.full{font-size:12px;color:#8a5b5b;background:#f8eded;border-radius:999px;padding:5px 8px}.empty{background:#fff;border:1px dashed #cfd3d9;border-radius:13px;padding:28px;text-align:center;color:var(--muted)}.cal-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:8px 0 10px}.cal-title{font-size:19px;font-weight:850}.cal-actions{display:flex;gap:6px}.calendar{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}.weekday{padding:8px 3px;text-align:center;background:#f7f8fa;border-bottom:1px solid var(--line);font-size:11px;font-weight:800;color:#69707b}.day{min-width:0;min-height:112px;padding:6px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;text-align:left;overflow:hidden}.day:nth-child(7n){border-right:0}.day.other{background:#fafbfc;color:#b5b9c0}.day.today{box-shadow:inset 0 0 0 2px #333}.date-num{font-size:11px;font-weight:850;margin-bottom:4px}.cal-event{display:block;width:100%;border:0;background:#edf6f1;color:#265b46;border-radius:6px;padding:4px 5px;margin:3px 0;font-size:10px;line-height:1.25;text-align:left;white-space:normal;overflow:hidden}.more{font-size:10px;color:var(--muted);padding:2px}.modal-backdrop{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.38);display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(560px,100%);max-height:80vh;overflow:auto;background:#fff;border-radius:16px;padding:18px}.modal h2{margin:0 0 12px;font-size:20px}.modal .event{background:#fafbfc}.modal-actions{display:flex;justify-content:flex-end;margin-top:14px}.bg-dms{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}.bg-dm{position:absolute;border-radius:20px;overflow:hidden;opacity:.25;filter:saturate(1) contrast(1.03);animation:floaty var(--dm-speed,18s) ease-in-out infinite alternate;box-shadow:0 12px 35px rgba(0,0,0,.12);will-change:transform;transform:translateZ(0)}.bg-dm img{width:100%;height:100%;object-fit:cover}.foot{margin-top:18px;font-size:11px;color:#8a9099;text-align:center}@keyframes floaty{0%{transform:translate3d(-10px,-18px,0) rotate(-4deg)}35%{transform:translate3d(26px,6px,0) rotate(2deg)}70%{transform:translate3d(-16px,34px,0) rotate(-1deg)}100%{transform:translate3d(34px,48px,0) rotate(5deg)}}
+@media(max-width:640px){.bg-dm{opacity:.20}.shell{width:min(100% - 20px,980px);padding-top:24px}.hero h1{font-size:28px}.toolbar{grid-template-columns:1fr auto}.event-top{align-items:flex-start}.day{min-height:84px;padding:4px}.weekday{font-size:10px;padding:6px 1px}.date-num{font-size:10px}.cal-event{font-size:9px;padding:3px 4px;margin:2px 0}.cal-title{font-size:16px}.badge{display:none}}
 @media(prefers-reduced-motion:reduce){.bg-dm{animation:none}}
 </style>
 </head>
@@ -31,8 +31,8 @@
   'use strict';
   // 这是公开的只读 API 地址，不是密码，也没有编辑权限。
   const API_URL='https://script.google.com/macros/s/AKfycbx5fqcNSao0hWQRQAio8m2NGStzwOUiZaw-Vdoqrh8WAegQqnkazy_kodLsBvYRqrYH/exec';
-  // 原客人页内置的 DM 照片，仅作为公开背景装饰；不携带姓名、排班或其他 Staff 信息。
-  // v3.5：HTML 内不保存任何照片；背景只读取公开 API 返回的图片 URL。
+  // 固定背景照片保存在 GitHub 仓库 images/ 文件夹，不访问 Google Drive，也不需要额外授权。
+  const EMBEDDED_DM_PHOTOS=['images/kid.jpg','images/siki.jpg','images/YY.jpg','images/趣多多.jpg','images/闪闪.jpg'];
   const $=s=>document.querySelector(s);
   let data={events:[],photos:[]},view='list',calendarCursor='';
   const pad=n=>String(n).padStart(2,'0');
@@ -53,30 +53,45 @@
   function closeModal(){ $('#modalBackdrop').classList.remove('show') }
   function renderPhotos(){
     const root=$('#bgDMs');
-    const sources=[...new Set((data.photos||[]).filter(u=>/^https?:\/\//i.test(String(u||''))))].slice(0,24);
-    if(!sources.length){root.innerHTML='';root.dataset.key='';return}
+    if(!root)return;
+    root.innerHTML='';
+    const photos=EMBEDDED_DM_PHOTOS;
+    if(!photos.length)return;
     const mobile=window.matchMedia('(max-width:640px)').matches;
-    const count=mobile?Math.min(7,Math.max(4,sources.length)):Math.min(12,Math.max(6,sources.length));
-    const key=`v35:${mobile?'m':'d'}:${sources.join('|')}`;
-    if(root.dataset.key===key&&root.children.length)return;
-    root.dataset.key=key;
-    root.innerHTML=Array.from({length:count},(_,i)=>{
-      const u=sources[i%sources.length];
-      const size=mobile?76+(i%3)*14:88+(i%5)*13;
-      const left=(i*23+5)%94;
-      const top=(i*17+(i%3)*11)%88;
-      const speed=18+(i%7)*1.8;
-      const delay=(i*2.1)%14;
-      return `<div class="bg-dm" style="left:${left}%;top:${top}%;width:${size}px;height:${size}px;--dm-speed:${speed.toFixed(1)}s;animation-delay:-${delay.toFixed(1)}s"><img src="${esc(u)}" alt="" loading="lazy" decoding="async" fetchpriority="low" onerror="this.parentElement.remove()"></div>`;
-    }).join('')
-  }
-  function schedulePhotos(){
-    if('requestIdleCallback' in window){requestIdleCallback(()=>renderPhotos(),{timeout:1200})}
-    else{setTimeout(renderPhotos,60)}
+    const layouts=mobile ? [
+      {x:2,y:10,w:112,h:142,r:-7,s:20},
+      {x:67,y:18,w:108,h:138,r:6,s:22},
+      {x:5,y:47,w:118,h:146,r:5,s:24},
+      {x:65,y:58,w:112,h:144,r:-5,s:21},
+      {x:31,y:78,w:116,h:146,r:4,s:23}
+    ] : [
+      {x:2,y:7,w:148,h:182,r:-7,s:22},
+      {x:82,y:10,w:150,h:185,r:6,s:25},
+      {x:7,y:42,w:158,h:194,r:5,s:24},
+      {x:78,y:48,w:154,h:190,r:-5,s:23},
+      {x:48,y:74,w:160,h:196,r:4,s:26}
+    ];
+    layouts.forEach((p,i)=>{
+      const box=document.createElement('div');
+      box.className='bg-dm';
+      box.style.left=`calc(${p.x}% - ${p.w/2}px)`;
+      box.style.top=`${p.y}%`;
+      box.style.width=p.w+'px';
+      box.style.height=p.h+'px';
+      box.style.setProperty('--dm-speed',p.s+'s');
+      box.style.transform=`rotate(${p.r}deg)`;
+      const img=document.createElement('img');
+      img.src=photos[i%photos.length];
+      img.alt='';
+      img.loading='lazy';
+      img.decoding='async';
+      box.appendChild(img);
+      root.appendChild(box);
+    });
   }
   function load(){return new Promise((resolve,reject)=>{const cb='__ikoGuest_'+Date.now()+'_'+Math.floor(Math.random()*1e6);let done=false;const tag=document.createElement('script');const timer=setTimeout(()=>finish(new Error('读取超时，请重试')),12000);function finish(err,payload){if(done)return;done=true;clearTimeout(timer);try{delete window[cb]}catch(e){};tag.remove();err?reject(err):resolve(payload)}window[cb]=payload=>finish(null,payload);tag.onerror=()=>finish(new Error('无法连接排期后台'));tag.src=API_URL+'?api=public&callback='+encodeURIComponent(cb)+'&_='+Date.now();document.head.appendChild(tag)})}
-  async function refresh(){const b=$('#refresh');b.disabled=true;$('#status').textContent='正在读取最新排期…';try{const p=await load();if(!p||p.ok===false)throw new Error(p?.error||'读取失败');data={events:Array.isArray(p.events)?p.events:[],photos:Array.isArray(p.photos)?p.photos:[]};$('#status').textContent=`已更新 · ${data.events.length} 个开放车次`;calendarCursor='';render();schedulePhotos()}catch(e){$('#status').textContent=e.message||'读取失败';$('#content').innerHTML='<div class="empty">暂时无法读取排期，请点击“刷新”重试。</div>'}finally{b.disabled=false}}
-  $('#search').addEventListener('input',()=>{calendarCursor='';render()});$('#refresh').onclick=refresh;$('#listBtn').onclick=()=>{view='list';render()};$('#calendarBtn').onclick=()=>{view='calendar';render()};$('#modalClose').onclick=closeModal;$('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});refresh();
+  async function refresh(){const b=$('#refresh');b.disabled=true;$('#status').textContent='正在读取最新排期…';try{const p=await load();if(!p||p.ok===false)throw new Error(p?.error||'读取失败');data={events:Array.isArray(p.events)?p.events:[],photos:Array.isArray(p.photos)?p.photos:[]};$('#status').textContent=`已更新 · ${data.events.length} 个开放车次`;calendarCursor='';renderPhotos();render()}catch(e){$('#status').textContent=e.message||'读取失败';$('#content').innerHTML='<div class="empty">暂时无法读取排期，请点击“刷新”重试。</div>'}finally{b.disabled=false}}
+  $('#search').addEventListener('input',()=>{calendarCursor='';render()});$('#refresh').onclick=refresh;$('#listBtn').onclick=()=>{view='list';render()};$('#calendarBtn').onclick=()=>{view='calendar';render()};$('#modalClose').onclick=closeModal;$('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});renderPhotos();refresh();
 })();
 </script>
 </body>
