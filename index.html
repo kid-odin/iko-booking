@@ -23,6 +23,27 @@ body:before{content:"";position:fixed;inset:0;z-index:0;background-image:linear-
 .full-tag{font-size:12px;color:#727985;font-weight:800;background:#eef0f2;border-radius:999px;padding:5px 8px}
 @media(max-width:560px){.switch{flex-wrap:wrap}.full-toggle{margin-left:0}}
 
+
+/* v3.0.5：满车统一红色显示 */
+.event.is-full{
+  background:rgba(255,239,239,.96);
+  border-color:#efb7b7;
+  box-shadow:0 8px 22px rgba(190,55,55,.06);
+}
+.event.is-full .event-title{color:#9f2f2f}
+.event.is-full .time{color:#b33a3a}
+.full-tag{
+  color:#a72d2d !important;
+  background:#ffe2e2 !important;
+  border:1px solid #efb0b0;
+}
+.cal-event.is-full{
+  background:#ffe2e2;
+  color:#9f2f2f;
+  border:1px solid #efb0b0;
+}
+.cal-event.is-full b{color:#9f2f2f}
+
 </style>
 </head>
 <body>
@@ -73,7 +94,7 @@ body:before{content:"";position:fixed;inset:0;z-index:0;background-image:linear-
       : (e.roleInfoKnown===false
           ? '<span class="unknown">空位信息待确认</span>'
           : `<span class="free-label">缺：</span>${roles.map(r=>`<span class="role">${esc(r)}</span>`).join('')}`);
-    return `<article class="event"><div class="event-top"><div class="event-title">《${esc(e.title||'-')}》</div><div class="time">${esc(timeText(e))}</div></div><div class="free">${free}</div></article>`;
+    return `<article class="event ${e.isFull?'is-full':''}"><div class="event-top"><div class="event-title">《${esc(e.title||'-')}》</div><div class="time">${esc(timeText(e))}</div></div><div class="free">${free}</div></article>`;
   }
   function baseMonth(){
     if(/^\d{4}-\d{2}$/.test(calendarCursor))return calendarCursor;
@@ -92,7 +113,7 @@ body:before{content:"";position:fixed;inset:0;z-index:0;background-image:linear-
       let yy=y,mm=m,dd=i-start+1,other=false;
       if(dd<1){other=true;mm=m-1;if(mm<1){mm=12;yy--}dd=prevDim+dd}else if(dd>dim){other=true;dd-=dim;mm=m+1;if(mm>12){mm=1;yy++}}
       const date=`${yy}-${pad(mm)}-${pad(dd)}`,ev=byDate[date]||[];
-      cells+=`<div class="day ${other?'other':''} ${date===todayStr()?'today':''}" data-date="${date}"><div class="date-num">${dd}${ev.length?` · ${ev.length}车`:''}</div>${ev.slice(0,2).map(x=>`<button class="cal-event" type="button" data-date="${date}"><b>${esc(x.time)}</b> ${esc(x.title)}</button>`).join('')}${ev.length>2?`<div class="more">＋${ev.length-2}</div>`:''}</div>`;
+      cells+=`<div class="day ${other?'other':''} ${date===todayStr()?'today':''}" data-date="${date}"><div class="date-num">${dd}${ev.length?` · ${ev.length}车`:''}</div>${ev.slice(0,2).map(x=>`<button class="cal-event ${x.isFull?'is-full':''}" type="button" data-date="${date}"><b>${esc(x.time)}</b> ${esc(x.title)}${x.isFull?' · 已满':''}</button>`).join('')}${ev.length>2?`<div class="more">＋${ev.length-2}</div>`:''}</div>`;
     }
     $('#content').innerHTML=`<div class="cal-tools"><div class="cal-actions"><button class="btn" id="prev">←</button><button class="btn" id="today">今天</button></div><div class="cal-title">${y}年 ${m}月</div><div class="cal-actions"><button class="btn" id="next">→</button></div></div><div class="calendar"><div class="cal-grid">${['一','二','三','四','五','六','日'].map(x=>`<div class="weekday">周${x}</div>`).join('')}${cells}</div></div>`;
     $('#prev').onclick=()=>shiftMonth(-1);$('#next').onclick=()=>shiftMonth(1);$('#today').onclick=()=>{calendarCursor=todayStr().slice(0,7);renderCalendar()};
